@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Mategotchi </title>
+    <link rel="stylesheet" href="../public/css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Quicksand:wght@300&family=Staatliches&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="contenedor" id="headerInicio">
+        <div id="header-index">
+            <nav>
+                <div id="header-logo_mategotchi">
+                    <a href="/" id="header-logo">
+                        <h2 class="logo">MG</h2>
+                        <span>MATEGOTCHI</span>
+                    </a>
+                </div>
+                <button type="button" id="boton-menu"><em class="fas fa-bars"></em></button>
+                <div id="menu-nav">
+                    <ul>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/">¿Quienes somos?</a></li>
+                        <li><a href="/">Iniciar Sesión</a></li>
+                        <li><a href="/">Registrarse</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+    </main>
+
+    <section>
+        <h2>Iniciar Sesión</h2>
+        <form action="/auth" id="form_login" method="POST">
+            <label for="email1_usuario">
+                <span>Correo electronico:</span>
+                <input type="email" name="email1_usuario" id="email1_usuario" required>
+            </label>
+            <label for="password1_usuario">
+                <span>Password:</span>
+                <input type="password" name="password1_usuario" id="password1_usuario" required>
+            </label>
+            <button type="submit" id="submit_login" class="boton">Ingresar</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Registrarse</h2>
+        <form action="/registroUsuario" id="form-registro" method="POST">
+            <label for="nombre_usuario">
+                <span>Nombre(s):</span>
+                <input type="text" name="nombre_usuario" id="nombre_usuario" required>
+            </label>
+            <label for="apPat_usuario">
+                <span>Apellido paterno:</span>
+                <input type="text" name="apPat_usuario" id="apPat_usuario" required>
+            </label>
+            <label for="apMat_usuario">
+                <span>Apellido materno:</span>
+                <input type="text" name="apMat_usuario" id="apMat_usuario" required>
+            </label>
+            <label for="grado_usuario">
+                <span>¿En que grado te encuentras?</span>
+                <select name="grado_usuario" id="grado_usuario" required>
+                    <option value="1ro de primaria">1ro de primaria</option>
+                    <option value="2do de primaria">2do de primaria</option>
+                    <option value="3ro de primaria">3ro de primaria</option>
+                </select>
+            </label>
+            <label for="email2_usuario">
+                <span>Correo electronico: </span>
+                <input type="email" name="email2_usuario" id="email2_usuario" required>
+            </label>
+            <label for="password2_usuario">
+                <span>Contraseña:</span>
+                <input type="password" name="password2_usuario" id="password2_usuario" required>
+            </label>
+            <button type="submit" id="submit_registro" class="boton">Registrarse</button>
+        </form>
+    </section>
+
+    <footer id="page-footer" class="contenedor">
+        <div>
+            <p>
+                Copyright <em class="fas fa-copyright"></em>
+                2020. Todos los
+                derechos reservados
+            </p>
+        </div>
+    </footer>
+
+    <!--Usaremos sweet alert para las alertas-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--Esto nos permite especificar codigo para el ejs y sweet alert-->
+    <% if(typeof alert !=  "undefined") { %>
+        <script>
+            Swal.fire({
+                title: '<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                showConfirmButton: <%= showConfirmButton %>,
+                timer: <%= timer %>
+            }).then(() => {
+                window.location = '/<%= ruta %>'
+            })
+        </script>
+    <% } %>
+
+    <script type="module" src="resources/js/script.js"></script>
+    <script src="resources/js/script-citas.js"></script>
+    <script src="resources/js/jquery-3.5.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+
+</html>
