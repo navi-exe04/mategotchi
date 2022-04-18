@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Mategotchi </title>
+    <link rel="stylesheet" href="../public/css/general_styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Quicksand:wght@300&family=Staatliches&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="contenedor" id="header-principal">
+        <div id="header-index">
+            <nav>
+                <div id="header-logo_mategotchi">
+                    <a href="/inicio" id="header-logo">
+                        <h2 class="logo">MG</h2>
+                        <span>MATEGOTCHI</span>
+                    </a>
+                </div>
+                <button type="button" id="boton-menu"><em class="fas fa-bars"></em></button>
+                <div id="menu-nav">
+                    <ul>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/">¿Quienes somos?</a></li>
+                        <li><a href="/"> <%=nombre_usuario%> </a></li>
+                        <li><a href="/logout">Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+    </main>
+
+    <footer id="page-footer" class="contenedor">
+        <div>
+            <p>
+                Copyright <em class="fas fa-copyright"></em>
+                2020. Todos los
+                derechos reservados
+            </p>
+        </div>
+    </footer>
+
+    <!--Usaremos sweet alert para las alertas-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--Esto nos permite especificar codigo para el ejs y sweet alert-->
+    <% if(typeof alert !=  "undefined") { %>
+        <script>
+            Swal.fire({
+                title: '<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                showConfirmButton: <%= showConfirmButton %>,
+                timer: <%= timer %>
+            }).then(() => {
+                window.location = '/<%= ruta %>'
+            })
+        </script>
+    <% } %>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+
+</html>

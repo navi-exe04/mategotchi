@@ -23,7 +23,9 @@ router.get('/inicio', (req, res) => {
     //El usuario ha ingresado correctamente
     if (req.session.loggedin) {
 
-        res.render('inicio');
+        res.render('inicio', {
+            nombre_usuario: req.session.name,
+        });
 
     } else { //El usuario no ha ingresado
 
@@ -34,10 +36,10 @@ router.get('/inicio', (req, res) => {
             alertIcon: 'warning',
             showConfirmButton: true,
             timer: false,
-            ruta: 'login'
+            ruta: ''
         });
 
-       res.render('/');
+       res.redirect('/');
 
     }
 
@@ -47,7 +49,15 @@ router.get('/inicio', (req, res) => {
 router.get('/logout', (req, res) => {
 
     req.session.destroy(() => { //Se "destruye la sesion"
-        res.redirect('/login')
+        res.render('index', {
+            alert: true,
+            alertTitle: "¡Hasta pronto!",
+            alertMessage: `No olvides repasar las actividades.`,
+            alertIcon: 'success',
+            showConfirmButton: false,
+            timer: 1500,
+            ruta: '',
+        });
     });
 
 });

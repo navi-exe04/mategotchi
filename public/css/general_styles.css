@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+
+.noScroll {
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/*Estilos para el header*/
+#header-principal {
+    z-index: 1;
+    transition: all 0.5s;
+    padding: 0;
+    height: fit-content;
+}
+
+#header-index {
+    padding: 15px 30px;
+}
+
+#header-index nav {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0;
+}
+
+#header-logo {
+    text-decoration: none;
+}
+
+#header-logo_mategotchi {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#header-logo_mategotchi span {
+    text-decoration: none;
+    color: var(--colorBlanco);
+    font-family: var(--fuenteSubTitulos);
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+h2.logo {
+    font-size: 42px;
+    font-family: var(--fuenteTitulos);
+    text-shadow: 2px 2px var(--sombraNegra);
+    color: var(--colorBlanco);
+    margin-bottom: 0;
+}
+
+#menu-nav {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+#menu-nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+#menu-nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+#menu-nav a {
+    transition: all 0.5s;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--colorBlanco);
+}
+
+#menu-nav a:hover, #menu-nav a.activo{
+    background-color: var(--colorCarne);
+    color: var(--colorVino);
+}
+
+#boton-menu {
+    display: none;
+}
+
+@media (max-width: 767px) {
+
+    #menu-nav {
+        position: fixed;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background: var(--colorVino);
+        top: 0;
+        right: -100%;
+        transition: all 0.5s;
+        background: var(--fondoVino);
+        backdrop-filter: blur(2px);
+    }
+
+    #menu-nav.show {
+        right: 0;
+    }
+
+    #menu-nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    #boton-menu {
+        position: static;
+        display: inline;
+        width: fit-content;
+        height: fit-content;
+        background: none;
+        padding: 10px;
+        border: 2px solid var(--colorBlanco);
+        border-radius: 5px;
+        z-index: 4;
+    }
+
+    #boton-menu i {
+        font-size: 25px;
+        color: var(--colorBlanco);
+    }
+    
+}
