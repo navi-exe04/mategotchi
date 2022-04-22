@@ -1,12 +1,26 @@
+:root {
+    --principalAmarillo: #FFE45E;
+    --principalNegro: #143642;
+    --secundarioBlanco: #F5F4F5;
+    --secundarioRojo: #A23E48;
+    --secundarioNaranja: #FF8C42;
+    --fuenteTextos: 'Rubik', sans-serif;
+    --fuenteTitulos: 'Alfa Slab One', cursive;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: 0.5s;
 }
 
 html {
+    position: relative;
     scroll-behavior: smooth;
     height: 100vh;
+    font-family: var(--fuenteTextos);
+    min-height: 100%;
 }
 
 .noScroll {
@@ -15,6 +29,21 @@ html {
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+body {
+    margin: 0;
+    margin-bottom: 40px;
+    background: var(--principalAmarillo);
+    font-family: var(--fuenteTextos);
+}
+
+.subtitle {
+    font-family: var(--fuenteTitulos);
+}
+
+span {
+    font-size: 1.3em;
 }
 
 /*Estilos para el header*/
@@ -133,7 +162,7 @@ h2.logo {
         padding: 10px;
         border: 2px solid var(--colorBlanco);
         border-radius: 5px;
-        z-index: 4;
+        z-index: 4; 
     }
 
     #boton-menu i {
@@ -141,4 +170,89 @@ h2.logo {
         color: var(--colorBlanco);
     }
     
+}
+
+/*Estilos para los popUp*/
+.main_section {
+    width: 100%;
+    height: 100vh;
+}
+
+#section_login {
+    height: 80vh;
+    background-image: url('../img/kid_learning1_G.jpg');
+    background-position: center;
+    width: 100%;
+}
+
+.popUp {
+    box-shadow: 0px 0px 28px -11px;
+    position: absolute;
+    background-color: var(--secundarioBlanco);
+    width: 30rem;
+    height: 30rem;
+    padding: 2em;
+    margin: 1em;
+    margin-top: 6rem;
+    border-radius: 0.5em;
+    overflow-y: scroll;
+    backdrop-filter: blur(8px) saturate(180%);
+    -webkit-backdrop-filter: blur(8px) saturate(180%);
+    background-color: rgba(245, 244, 245, 0.33);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.popUp * {
+    display: block;
+    text-align: center;
+}
+
+.popUp label {
+    width: 100%;
+}
+
+.popUp input, .popUp select {
+    font-family: var(--fuenteTextos);
+    font-size: 16px;
+    background-color: rgba(245, 244, 245, 0.33);
+    box-shadow: inset 0px 0px 15px -10px;
+    border: none;
+    margin: 5px auto;
+    width: 75%;
+    border-radius: 0.5rem;
+    padding: 0.5em;
+}
+
+#div_login {
+    display: none;
+}
+
+@media (max-width: 767px) {
+
+    #section_login {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .popUp {
+        min-width: 350px;
+        width: 80%;
+    }
+    
+}
+
+/*Estilos del footer*/
+footer {
+    font-size: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+footer p {
+    margin: 0 auto;
+    width: fit-content;
+    font-weight: bolder;
 }

@@ -8,13 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Mategotchi </title>
     <link rel="stylesheet" href="../public/css/general_styles.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Quicksand:wght@300&family=Staatliches&display=swap"
-        rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Rubik:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -33,69 +29,70 @@
                     <ul>
                         <li><a href="/">Inicio</a></li>
                         <li><a href="/">¿Quienes somos?</a></li>
-                        <li><a href="/">Iniciar Sesión</a></li>
-                        <li><a href="/">Registrarse</a></li>
+                        <li><a href="/">Contacto</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main class="main_section">
+
+        <section id="section_login">
+            <div class="popUp" id="div_login">
+                <h2 class="subtitle">Iniciar Sesión</h2>
+                <form action="/auth" id="form_login" method="POST" class="form_index">
+                    <label for="email1_usuario">
+                        <span>Correo electronico:</span>
+                        <input type="email" name="email1_usuario" id="email1_usuario" required>
+                    </label>
+                    <label for="password1_usuario">
+                        <span>Password:</span>
+                        <input type="password" name="password1_usuario" id="password1_usuario" required>
+                    </label>
+                    <button type="submit" id="submit_login" class="boton">Ingresar</button>
+                </form>
+            </div>
+        
+            <div class="popUp" id="div_registro">
+                <h2 class="subtitle">Registrarse</h2>
+                <form action="/registroUsuario" id="form-registro" method="POST" class="form_index">
+                    <label for="nombre_usuario">
+                        <span>Nombre(s):</span>
+                        <input type="text" name="nombre_usuario" id="nombre_usuario" required>
+                    </label>
+                    <label for="apPat_usuario">
+                        <span>Apellido paterno:</span>
+                        <input type="text" name="apPat_usuario" id="apPat_usuario" required>
+                    </label>
+                    <label for="apMat_usuario">
+                        <span>Apellido materno:</span>
+                        <input type="text" name="apMat_usuario" id="apMat_usuario" required>
+                    </label>
+                    <label for="grado_usuario">
+                        <span>¿En que grado te encuentras?</span>
+                        <select name="grado_usuario" id="grado_usuario" required>
+                            <option value="1ro de primaria">1ro de primaria</option>
+                            <option value="2do de primaria">2do de primaria</option>
+                            <option value="3ro de primaria">3ro de primaria</option>
+                        </select>
+                    </label>
+                    <label for="email2_usuario">
+                        <span>Correo electronico: </span>
+                        <input type="email" name="email2_usuario" id="email2_usuario" required>
+                    </label>
+                    <label for="password2_usuario">
+                        <span>Contraseña:</span>
+                        <input type="password" name="password2_usuario" id="password2_usuario" required>
+                    </label>
+                    <button type="submit" id="submit_registro" class="boton">Registrarse</button>
+                </form>
+            </div>
+        </section>
 
     </main>
 
-    <section>
-        <h2>Iniciar Sesión</h2>
-        <form action="/auth" id="form_login" method="POST">
-            <label for="email1_usuario">
-                <span>Correo electronico:</span>
-                <input type="email" name="email1_usuario" id="email1_usuario" required>
-            </label>
-            <label for="password1_usuario">
-                <span>Password:</span>
-                <input type="password" name="password1_usuario" id="password1_usuario" required>
-            </label>
-            <button type="submit" id="submit_login" class="boton">Ingresar</button>
-        </form>
-    </section>
-
-    <section>
-        <h2>Registrarse</h2>
-        <form action="/registroUsuario" id="form-registro" method="POST">
-            <label for="nombre_usuario">
-                <span>Nombre(s):</span>
-                <input type="text" name="nombre_usuario" id="nombre_usuario" required>
-            </label>
-            <label for="apPat_usuario">
-                <span>Apellido paterno:</span>
-                <input type="text" name="apPat_usuario" id="apPat_usuario" required>
-            </label>
-            <label for="apMat_usuario">
-                <span>Apellido materno:</span>
-                <input type="text" name="apMat_usuario" id="apMat_usuario" required>
-            </label>
-            <label for="grado_usuario">
-                <span>¿En que grado te encuentras?</span>
-                <select name="grado_usuario" id="grado_usuario" required>
-                    <option value="1ro de primaria">1ro de primaria</option>
-                    <option value="2do de primaria">2do de primaria</option>
-                    <option value="3ro de primaria">3ro de primaria</option>
-                </select>
-            </label>
-            <label for="email2_usuario">
-                <span>Correo electronico: </span>
-                <input type="email" name="email2_usuario" id="email2_usuario" required>
-            </label>
-            <label for="password2_usuario">
-                <span>Contraseña:</span>
-                <input type="password" name="password2_usuario" id="password2_usuario" required>
-            </label>
-            <button type="submit" id="submit_registro" class="boton">Registrarse</button>
-        </form>
-    </section>
-
-    <footer id="page-footer" class="contenedor">
+    <footer>
         <div>
             <p>
                 Copyright <em class="fas fa-copyright"></em>
