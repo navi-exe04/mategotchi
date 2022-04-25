@@ -4,8 +4,8 @@
     --secundarioBlanco: #F5F4F5;
     --secundarioRojo: #A23E48;
     --secundarioNaranja: #FF8C42;
-    --fuenteTextos: 'Rubik', sans-serif;
-    --fuenteTitulos: 'Alfa Slab One', cursive;
+    --fuenteTextos: 'Press Start 2P', cursive;
+    --fuenteTitulos: 'Press Start 2P', cursive;
 }
 
 * {
@@ -31,11 +31,19 @@ html {
     display: none;
 }
 
+header, footer {
+    backdrop-filter: blur(8px) saturate(180%);
+    -webkit-backdrop-filter: blur(8px) saturate(180%);
+    background-color: rgba(245, 244, 245, 0.33);
+}
+
 body {
     margin: 0;
     margin-bottom: 40px;
-    background: var(--principalAmarillo);
+    background: var(--secundarioBlanco);
     font-family: var(--fuenteTextos);
+    background-image: url('../img/kid_learning1_G.jpg');
+    background-position: center;
 }
 
 .subtitle {
@@ -47,15 +55,15 @@ span {
 }
 
 /*Estilos para el header*/
-#header-principal {
+#headerInicio {
+    padding: 0;
+}
+
+#header-index {
     z-index: 1;
     transition: all 0.5s;
     padding: 0;
     height: fit-content;
-}
-
-#header-index {
-    padding: 15px 30px;
 }
 
 #header-index nav {
@@ -180,9 +188,6 @@ h2.logo {
 
 #section_login {
     height: 80vh;
-    background-image: url('../img/kid_learning1_G.jpg');
-    background-position: center;
-    width: 100%;
 }
 
 .popUp {
@@ -212,17 +217,12 @@ h2.logo {
     width: 100%;
 }
 
-.popUp input, .popUp select {
-    font-family: var(--fuenteTextos);
-    font-size: 16px;
+.popUp input {
+    backdrop-filter: blur(8px) saturate(180%);
+    -webkit-backdrop-filter: blur(8px) saturate(180%);
     background-color: rgba(245, 244, 245, 0.33);
-    box-shadow: inset 0px 0px 15px -10px;
-    border: none;
-    margin: 5px auto;
-    width: 75%;
-    border-radius: 0.5rem;
-    padding: 0.5em;
 }
+
 
 #div_login {
     display: none;
