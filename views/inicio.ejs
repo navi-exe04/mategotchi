@@ -8,9 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Mategotchi </title>
     <link rel="stylesheet" href="../public/css/general_styles.css">
+    <link rel="stylesheet" href="../public/css/inicio_styles.css">
+    <link rel="stylesheet" href="../node_modules/nes.css/css/nes.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    <!-- minify -->
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <!-- latest -->
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <!-- core style only -->
+    <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -27,10 +35,10 @@
                 <button type="button" id="boton-menu"><em class="fas fa-bars"></em></button>
                 <div id="menu-nav">
                     <ul>
-                        <li><a href="/">Inicio</a></li>
-                        <li><a href="/">¿Quienes somos?</a></li>
-                        <li><a href="/"> <%=nombre_usuario%> </a></li>
-                        <li><a href="/logout">Cerrar Sesión</a></li>
+                        <li><a href="/" class="nes-btn">Mascota</a></li>
+                        <li><a href="/" class="nes-btn">Mi perfil</a></li>
+                        <li><a href="/" class="nes-btn">Configuración</a></li>
+                        <li><a href="/logout" class="nes-btn is-error">Cerrar Sesión</a></li>
                     </ul>
                 </div>
             </nav>
@@ -38,7 +46,16 @@
     </header>
 
     <main>
+        <section class="inicio-section nes-container with-title is-centered is-rounded">
+            <p class="title"><%=nombre_usuario%></p>
+            <div><em class="nes-bcrikko"></em></div>
+        </section>
+        <section class="inicio-section">
 
+        </section>
+        <section class="inicio-section">
+
+        </section>
     </main>
 
     <footer id="page-footer" class="contenedor">
@@ -68,6 +85,7 @@
         </script>
     <% } %>
 
+    <script src="../public/js/script.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </body>
