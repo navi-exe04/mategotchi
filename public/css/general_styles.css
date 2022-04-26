@@ -39,11 +39,18 @@ header, footer {
 
 body {
     margin: 0;
+    height: 100%;
     margin-bottom: 40px;
     background: var(--secundarioBlanco);
     font-family: var(--fuenteTextos);
-    background-image: url('../img/kid_learning1_G.jpg');
+    background-image: url('../img/pixel_bg1.jpg');
     background-position: center;
+    background-size: cover;
+}
+
+main.active, header.active, footer.active {
+    transition: all .5s;
+    filter: blur(4px);
 }
 
 .subtitle {
@@ -51,15 +58,11 @@ body {
 }
 
 span {
-    font-size: 1.3em;
+    font-size: 1.0em;
 }
 
 /*Estilos para el header*/
 #headerInicio {
-    padding: 0;
-}
-
-#header-index {
     z-index: 1;
     transition: all 0.5s;
     padding: 0;
@@ -78,6 +81,7 @@ span {
 }
 
 #header-logo_mategotchi {
+    margin-left: 2rem;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -89,14 +93,6 @@ span {
     font-family: var(--fuenteSubTitulos);
     font-weight: bolder;
     font-size: 20px;
-}
-
-h2.logo {
-    font-size: 42px;
-    font-family: var(--fuenteTitulos);
-    text-shadow: 2px 2px var(--sombraNegra);
-    color: var(--colorBlanco);
-    margin-bottom: 0;
 }
 
 #menu-nav {
@@ -118,17 +114,12 @@ h2.logo {
 #menu-nav a {
     transition: all 0.5s;
     height: fit-content;
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bolder;
     text-decoration: none;
-    color: var(--colorBlanco);
-}
-
-#menu-nav a:hover, #menu-nav a.activo{
-    background-color: var(--colorCarne);
-    color: var(--colorVino);
+    margin: 0;
 }
 
 #boton-menu {
@@ -141,13 +132,12 @@ h2.logo {
         position: fixed;
         justify-content: center;
         width: 100%;
-        height: 100%;
-        background: var(--colorVino);
-        top: 0;
+        height: 100vh;
+        top: 0%;
         right: -100%;
-        transition: all 0.5s;
-        background: var(--fondoVino);
-        backdrop-filter: blur(2px);
+        backdrop-filter: blur(8px) saturate(180%);
+        -webkit-backdrop-filter: blur(8px) saturate(180%);
+        background-color: rgba(245, 244, 245, 0.33);
     }
 
     #menu-nav.show {
@@ -168,9 +158,9 @@ h2.logo {
         height: fit-content;
         background: none;
         padding: 10px;
-        border: 2px solid var(--colorBlanco);
+        border: 2px solid var(--secundarioBlanco);
         border-radius: 5px;
-        z-index: 4; 
+        z-index: 4;
     }
 
     #boton-menu i {
@@ -183,22 +173,22 @@ h2.logo {
 /*Estilos para los popUp*/
 .main_section {
     width: 100%;
-    height: 100vh;
-}
-
-#section_login {
-    height: 80vh;
 }
 
 .popUp {
+    z-index: 4;
+    transition: all 0.5s;
+    position: relative;
     box-shadow: 0px 0px 28px -11px;
-    position: absolute;
     background-color: var(--secundarioBlanco);
     width: 30rem;
     height: 30rem;
+    max-width: 80%;
+    overflow-y: scroll;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-40%);
     padding: 2em;
-    margin: 1em;
-    margin-top: 6rem;
     border-radius: 0.5em;
     overflow-y: scroll;
     backdrop-filter: blur(8px) saturate(180%);
@@ -206,6 +196,21 @@ h2.logo {
     background-color: rgba(245, 244, 245, 0.33);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.popUp.active {
+    transform: translate(-50%,30%);
+    visibility: visible;
+    opacity: 1;
+}
+
+#div_registro {
+    transform: translate(-50%,-100%);
+}
+#div_registro.active {
+    transform: translate(-50%,-70%);;
 }
 
 .popUp * {
@@ -221,11 +226,6 @@ h2.logo {
     backdrop-filter: blur(8px) saturate(180%);
     -webkit-backdrop-filter: blur(8px) saturate(180%);
     background-color: rgba(245, 244, 245, 0.33);
-}
-
-
-#div_login {
-    display: none;
 }
 
 @media (max-width: 767px) {
@@ -244,6 +244,11 @@ h2.logo {
 
 /*Estilos del footer*/
 footer {
+    z-index: 1;
+    transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     font-size: 1rem;
     position: absolute;
     bottom: 0;
