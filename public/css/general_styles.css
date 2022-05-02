@@ -38,15 +38,31 @@ header, footer {
     background-color: rgba(245, 244, 245, 0.33);
 }
 
+.wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
 body {
     margin: 0;
     height: 100%;
     margin-bottom: 40px;
     background: var(--secundarioBlanco);
     font-family: var(--fuenteTextos);
-    background-image: url('../img/pixel_bg1.jpg');
+    background-image: url('../img/pixel_bg2.jpg');
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
+}
+
+.flex-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.center-flex {
+    justify-content: center;
+    align-items: center;
 }
 
 main.active, header.active, footer.active {
@@ -57,8 +73,8 @@ main.active, header.active, footer.active {
 .titleh1 {
     text-align: center;
     width: 100%;
-    margin: 2rem;
-    font-size: 4rem;
+    margin: 0.5rem;
+    font-size: 2.5rem;
     color: var(--principalAmarillo);
     text-shadow: var(--sombraTextos);
 }
@@ -72,11 +88,19 @@ span {
 }
 
 /*Estilos para el header*/
-#headerInicio {
+#header-principal {
     z-index: 1;
     transition: all 0.5s;
     padding: 0;
     height: fit-content;
+    position: sticky;
+    top: 0;
+}
+
+@media (max-width:870px) {
+    #header-principal {
+        position: sticky;
+    }
 }
 
 #header-index nav {
@@ -94,17 +118,11 @@ span {
 
 #header-logo_mategotchi {
     margin: 1rem;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    margin-left: 3rem;
 }
 
-#header-logo_mategotchi span {
-    text-decoration: none;
-    color: var(--colorBlanco);
-    font-family: var(--fuenteSubTitulos);
-    font-weight: bolder;
-    font-size: 20px;
+#header-logo img {
+    width: 20%;
 }
 
 #menu-nav {
@@ -138,7 +156,7 @@ span {
     display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1400px) {
 
     #menu-nav {
         position: fixed;
@@ -147,9 +165,11 @@ span {
         height: 100vh;
         top: 0%;
         right: -100%;
-        backdrop-filter: blur(8px) saturate(180%);
-        -webkit-backdrop-filter: blur(8px) saturate(180%);
-        background-color: rgba(245, 244, 245, 0.33);
+        backdrop-filter: blur(14px) saturate(144%);
+        -webkit-backdrop-filter: blur(14px) saturate(144%);
+        background-color: rgba(45, 189, 239, 0.5);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
     }
 
     #menu-nav.show {
@@ -173,6 +193,8 @@ span {
         border: 2px solid var(--secundarioBlanco);
         border-radius: 5px;
         z-index: 4;
+        margin: auto 0;
+        margin-right: 1rem;
     }
 
     #boton-menu i {
@@ -183,8 +205,6 @@ span {
 }
 
 /*Estilos para el main*/
-.main_section {
-}
 
 .info-bienvenida {
     display: flex;
@@ -296,10 +316,18 @@ footer {
     bottom: 0;
     width: 100%;
     height: 50px;
+    bottom: 0;
+    left: 0;
 }
 
 footer p {
     margin: 0 auto;
     width: fit-content;
     font-weight: bolder;
+}
+
+@media (max-width:870px) {
+    footer {
+        position: sticky;
+    }
 }

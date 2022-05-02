@@ -21,18 +21,20 @@
     <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="wrapper">
 
     <header class="contenedor" id="header-principal">
         <div id="header-index">
             <nav>
                 <div id="header-logo_mategotchi">
                     <a href="/inicio" id="header-logo">
-                        <h2 class="logo">MG</h2>
-                        <span>MATEGOTCHI</span>
+                        <picture>
+                            <source media="(min-width: 871px)" srcset="../public/img/logo-completo.png">
+                            <img src="../public/img/logo.png" alt="Logo de Mategotchi">
+                        </picture>
                     </a>
                 </div>
-                <button type="button" id="boton-menu"><em class="fas fa-bars"></em></button>
+                <button type="button" id="boton-menu"><em class="fas fa-bars nes-btn"></em></button>
                 <div id="menu-nav">
                     <ul>
                         <li><a href="/" class="nes-btn">Mascota</a></li>
@@ -45,16 +47,43 @@
         </div>
     </header>
 
-    <main>
-        <section class="inicio-section nes-container with-title is-centered is-rounded">
-            <p class="title"><%=nombre_usuario%></p>
-            <div><em class="nes-bcrikko"></em></div>
+    <main class="flex-section center-flex">
+        <h1 class="titleh1">Menu</h1>
+        <section class="section-inicio" id="user-div">
+            <div class="div-inicio nes-container is-centered flex-section" id="profile-section">
+                <div id="img-user">
+                    <em class="nes-bcrikko"></em>
+                </div>
+                <div id="info-user">
+                    <p> <%=nombre_usuario%> </p>
+                    <p>80 exp</p>
+                    <progress class="nes-progress is-success" value="80" max="100"></progress>
+                </div>
+            </div>
+            <div class="div-inicio nes-container with-title is-centered">
+                <h3>Copo de nieve</h3>
+                <img src="../public/img/mouse-gif.gif" alt="" id="user-pet">
+            </div>
         </section>
-        <section class="inicio-section">
-
-        </section>
-        <section class="inicio-section">
-
+        <section class="section-inicio" id="menu-div">
+            <a>
+                <div class="div-inicio nes-container is-centered div-opcion" id="div-clases">
+                    <h3>Clases</h3>
+                    <img src="../public/img/icon-clases.png" alt="">
+                </div>
+            </a>
+            <a>
+                <div class="div-inicio nes-container is-centered div-opcion" id="div-ejercicios">
+                    <h3>Ejercicios</h3>
+                    <img src="../public/img/icon-actividad.png" alt="">
+                </div>
+            </a>
+            <a>
+                <div class="div-inicio nes-container is-centered div-opcion" id="div-juegos">
+                    <h3>Juegos</h3>
+                    <img src="../public/img/icon-juego.png" alt="">
+                </div>
+            </a>
         </section>
     </main>
 
@@ -85,7 +114,7 @@
         </script>
     <% } %>
 
-    <script src="../public/js/script.js"></script>
+    <script src="../public/js/script_inicio.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </body>

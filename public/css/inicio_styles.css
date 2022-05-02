@@ -1,4 +1,55 @@
-.inicio-section {
-        width: fit-content;
+.section-inicio {
+        height: 100%;
+        width: 45%;
         margin: 1rem;
+}
+
+.div-inicio {
+        margin-top: 0.5rem !important;
+        backdrop-filter: blur(8px) saturate(180%);
+        -webkit-backdrop-filter: blur(8px) saturate(180%);
+        background-color: rgba(245, 244, 245, 0.33);
+}
+
+#user-div {
+        order: 1;
+}
+
+#menu-div {
+        order: 2;
+}
+
+.div-opcion {
+        padding: 19rem;
+}
+
+.div-opcion:hover {
+        background-color: rgba(255, 228, 94, 0.53);
+}
+
+#profile-section {
+        justify-content: space-around;
+}
+
+#img-user {
+        display: flex;
+        align-items: center;
+        order: 1;
+        width: 15%;
+}
+
+#info-user {
+        order: 2;
+        width: 80%;
+}
+
+#user-pet {
+        width: 45%;
+}
+
+@media (max-width: 870px) {
+        .section-inicio {
+                width: 90%;
+                min-width: 320px;
+        }
 }

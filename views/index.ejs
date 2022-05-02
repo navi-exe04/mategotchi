@@ -22,13 +22,15 @@
 
 <body>
 
-    <header class="contenedor" id="headerInicio">
+    <header class="contenedor" id="header-principal">
         <div id="header-index">
             <nav>
                 <div id="header-logo_mategotchi">
                     <a href="/" id="header-logo">
-                        <h2 class="logo">MG</h2>
-                        <span>MATEGOTCHI</span>
+                        <picture>
+                            <source media="(min-width: 871px)" srcset="../public/img/logo-completo.png">
+                            <img src="../public/img/logo.png" alt="Logo de Mategotchi">
+                        </picture>
                     </a>
                 </div>
                 <button type="button" id="boton-menu"><em class="fas fa-bars nes-btn"></em></button>
@@ -45,7 +47,7 @@
         </div>
     </header>
 
-    <main class="main_section">
+    <main class="main-section">
         <h1 class="titleh1">¡Bienvenido!</h1>
         <section class="info-bienvenida">
             <div class="avatar-gif">
