@@ -22,10 +22,10 @@ botonMenu.addEventListener('click', (e) => {
 //Funcion encargada de los eventos de los botones de informacion
 function botonesInformacion() {
 
-    const botonJuegos = document.getElementById("boton-juegos");
+    /* const botonJuegos = document.getElementById("boton-juegos");
     const botonCerrarJuegos = document.getElementById("btn-cerrarJuegos");
     botonJuegos.addEventListener('click', abreInfo(divJuegos));
-    botonCerrarJuegos.addEventListener('click', abreInfo(divJuegos));
+    botonCerrarJuegos.addEventListener('click', abreInfo(divJuegos)); */
 
 }
 

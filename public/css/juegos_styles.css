@@ -1,0 +1,35 @@
+.nivel1Bienvenida{
+    max-width: 65%;
+    max-height: 65%;
+    
+}
+.fondo{
+    text-align: center; 
+    size: cover;
+}
+.boton{
+    position: absolute;
+    bottom: 5%;
+    right: 19%;
+}
+.respuesta{
+    top: 15px;
+    right: 18%;
+}
+.ejercicio2{
+    width: 400px;
+}
+.respuestaNivel3{
+    position: absolute;
+    top: 350px;
+    right: 25.4%;
+}
+.Entradarespuesta{
+    background: rgb(168, 209, 142);
+    width: 80px;
+    height: 29px;
+}
+.boton2{
+    position: absolute;
+    top: 100px;
+}

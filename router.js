@@ -62,6 +62,84 @@ router.get('/logout', (req, res) => {
 
 });
 
+//Ruta para el juego 1
+router.get('/juego1', (req, res) => {
+    
+    //El usuario ha ingresado correctamente
+    if (req.session.loggedin) {
+
+        res.render('juego1', {
+            nombre_usuario: req.session.name,
+        });
+
+    } else { //El usuario no ha ingresado
+
+        res.render('index', {
+            alert: true,
+            alertTitle: "¡Lo siento!",
+            alertMessage: "Debe ingresar sesión.",
+            alertIcon: 'warning',
+            showConfirmButton: true,
+            timer: false,
+            ruta: ''
+        });
+
+    }
+
+});
+
+//Ruta para el juego 2
+router.get('/juego2', (req, res) => {
+    
+    //El usuario ha ingresado correctamente
+    if (req.session.loggedin) {
+
+        res.render('juego2', {
+            nombre_usuario: req.session.name,
+        });
+
+    } else { //El usuario no ha ingresado
+
+        res.render('index', {
+            alert: true,
+            alertTitle: "¡Lo siento!",
+            alertMessage: "Debe ingresar sesión.",
+            alertIcon: 'warning',
+            showConfirmButton: true,
+            timer: false,
+            ruta: ''
+        });
+
+    }
+
+});
+
+//Ruta para el juego 2
+router.get('/juego3', (req, res) => {
+    
+    //El usuario ha ingresado correctamente
+    if (req.session.loggedin) {
+
+        res.render('juego3', {
+            nombre_usuario: req.session.name,
+        });
+
+    } else { //El usuario no ha ingresado
+
+        res.render('index', {
+            alert: true,
+            alertTitle: "¡Lo siento!",
+            alertMessage: "Debe ingresar sesión.",
+            alertIcon: 'warning',
+            showConfirmButton: true,
+            timer: false,
+            ruta: ''
+        });
+
+    }
+
+});
+
 //Solicitamos las funciones del controlador
 const controllers = require('./controllers/controllers');
 router.post('/auth', controllers.auth);

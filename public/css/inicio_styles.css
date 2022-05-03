@@ -47,6 +47,36 @@
         width: 45%;
 }
 
+
+#div_juegos {
+        transform: translate(-50%,-120%);
+        -webkit-transform: translate(-50%,-120%);
+        -moz-transform: translate(-50%,-120%);
+        -ms-transform: translate(-50%,-120%);
+        -o-transform: translate(-50%,-120%);
+}
+
+.option-juego {
+        background-position: center;
+        background-size: cover;
+        margin: 1rem;
+}
+
+#juego1 {
+        order: 1;
+        background-image: url('../img/juego1.png');
+}
+
+#juego2 {
+        order: 2;
+        background-image: url('../img/juego2.png');
+}
+
+#juego3 {
+        order: 3;
+        background-image: url('../img/juego3.png');
+}
+
 @media (max-width: 870px) {
         .section-inicio {
                 width: 90%;

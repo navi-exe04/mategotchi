@@ -9,6 +9,7 @@
     <title> Mategotchi </title>
     <link rel="stylesheet" href="../public/css/general_styles.css">
     <link rel="stylesheet" href="../public/css/inicio_styles.css">
+    <link rel="stylesheet" href="../public/css/juegos_styles.css">
     <link rel="stylesheet" href="../node_modules/nes.css/css/nes.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +20,7 @@
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
     <!-- core style only -->
     <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 </head>
 
 <body class="wrapper">
@@ -37,9 +39,7 @@
                 <button type="button" id="boton-menu"><em class="fas fa-bars nes-btn"></em></button>
                 <div id="menu-nav">
                     <ul>
-                        <li><a href="/" class="nes-btn">Mascota</a></li>
-                        <li><a href="/" class="nes-btn">Mi perfil</a></li>
-                        <li><a href="/" class="nes-btn">Configuración</a></li>
+                        <li><a href="/inicio" class="nes-btn">Inicio</a></li>
                         <li><a href="/logout" class="nes-btn is-error">Cerrar Sesión</a></li>
                     </ul>
                 </div>
@@ -48,60 +48,22 @@
     </header>
 
     <main class="flex-section center-flex">
-        <h1 class="titleh1">Menu</h1>
-        <section class="section-inicio" id="user-div">
-            <div class="div-inicio nes-container is-centered flex-section" id="profile-section">
-                <div id="img-user">
-                    <em class="nes-bcrikko"></em>
-                </div>
-                <div id="info-user">
-                    <p> <%=nombre_usuario%> </p>
-                    <p>80 exp</p>
-                    <progress class="nes-progress is-success" value="80" max="100"></progress>
-                </div>
+        <h1 class="titleh1">Juego 1</h1>
+        <section class="zona-juego">
+            <div class="fondo"> 
+                <img id="ejercicio2" src="../public/img/img_juegos/bienvenidanivel3.png" class="nivel1Bienvenida">
             </div>
-            <div class="div-inicio nes-container with-title is-centered">
-                <h3>Copo de nieve</h3>
-                <img src="../public/img/mouse-gif.gif" alt="" id="user-pet">
+            <div class="boton" id="boton1">
+                <button onclick="iniciar(0)" type="button"> <img src="../public/img/img_juegos/aceptar.png" height ="80" width="100" /></button>
             </div>
-        </section>
-        <section class="section-inicio" id="menu-div">
-            <a>
-                <div class="div-inicio nes-container is-centered div-opcion" id="div-clases">
-                    <h3>Clases</h3>
-                    <img src="../public/img/icon-clases.png" alt="">
-                </div>
-            </a>
-            <a>
-                <div class="div-inicio nes-container is-centered div-opcion" id="div-ejercicios">
-                    <h3>Ejercicios</h3>
-                    <img src="../public/img/icon-actividad.png" alt="">
-                </div>
-            </a>
-            <a id="boton-juegos">
-                <div class="div-inicio nes-container is-centered div-opcion" id="div-juegos">
-                    <h3>Juegos</h3>
-                    <img src="../public/img/icon-juego.png" alt="">
-                </div>
-            </a>
+            <div class="respuestaNivel3" id="resultado" style="display: none;">
+                <form name="myForm" action="" onsubmit="validarRespuesta()" method="post">
+                    <input  class="Entradarespuesta" type="text" name="fname">
+                    <button class="boton2" onsubmit="validarRespuesta()" type="submit"> <img src="../public/img/img_juegos/aceptar.png" height ="40" width="50" /></button>
+                  </form>
+            </div>
         </section>
     </main>
-
-    <div class="popUp nes-container is-rounded" id="div_juegos">
-        <button type="button" id="btn-cerrarJuegos" class="nes-btn is-error">X</button>
-        <h2 class="subtitle">Lista de juegos</h2>
-        <section class="menu-juegos">
-            <a href="/juego1">
-                <div class="option-juego nes-container is-centered" id="juego1"><h3>Juego 1</h3></div>
-            </a>
-            <a href="/juego2">
-                <div class="option-juego nes-container is-centered" id="juego2"><h3>Juego 2</h3></div>
-            </a>
-            <a href="/juego3">
-                <div class="option-juego nes-container is-centered" id="juego3"><h3>Juego 3</h3></div>
-            </a>
-        </section>
-    </div>
 
     <footer id="page-footer" class="contenedor">
         <div>
@@ -130,7 +92,8 @@
         </script>
     <% } %>
 
-    <script src="../public/js/script_inicio.js"></script>
+    <script src="../public/js/script_juegos.js"></script>
+    <script src="../public/js/script_juego3.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </body>
