@@ -73,7 +73,7 @@ main.active, header.active, footer.active {
 .titleh1 {
     text-align: center;
     width: 100%;
-    margin: 0.5rem;
+    margin: 2rem;
     font-size: 2.5rem;
     color: var(--principalAmarillo);
     text-shadow: var(--sombraTextos);
@@ -205,38 +205,75 @@ span {
 }
 
 /*Estilos para el main*/
-
-.info-bienvenida {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto 0;
+.sections-main {
+    width: 80%;
 }
 
-.avatar-gif {
-    z-index: 1;
+.info-bienvenida {
+    display: contents;
+}
+
+.info {
     width: 80%;
     display: flex;
+    flex-wrap: wrap;
+    margin: 3rem auto;
     justify-content: center;
     align-items: center;
 }
 
+.info-div {
+    height: fit-content;
+    backdrop-filter: blur(8px) saturate(180%);
+    -webkit-backdrop-filter: blur(8px) saturate(180%);
+    background-color: rgba(245, 244, 245, 0.33);
+}
+
+#avatar1 {
+    order: 1;
+    width: 30%;
+}
+#bienvenida1 {
+    order: 2;
+    width: 60%;
+}
+#bienvenida2 {
+    order: 3;
+    width: 60%;
+}
+#avatar2 {
+    order: 4;
+    width: 30%;
+}
+
+.avatar-gif {
+    z-index: 1;
+}
+
 .mensaje-bienvenida p {
-    color: var(--secundarioBlanco);
-    text-shadow: var(--sombraTextos);
-    font-size: 3rem;
+    color: var(--principalNegro);
+    font-size: 2rem;
     width: 90%;
-    text-align: justify;
+    text-align: center;
     margin: 0 auto;
 }
 
-/*Estilos para los popUp*/
-.main_section {
-    width: 100%;
+@media (max-width: 1400px){
+    #avatar1, #avatar2, #bienvenida1, #bienvenida2 {
+        width: 100%;
+    }
+    #avatar2 {
+        order: 3;
+    }
+    #bienvenida2 {
+        order: 4;
+    }
+    .mensaje-bienvenida p {
+        font-size: 2.5rem;
+    }
 }
 
+/*Estilos para los popUp*/
 .popUp {
     z-index: 4;
     transition: all 0.5s;
@@ -270,9 +307,17 @@ span {
 
 #div_registro {
     transform: translate(-50%,-150%);
+    -webkit-transform: translate(-50%,-150%);
+    -moz-transform: translate(-50%,-150%);
+    -ms-transform: translate(-50%,-150%);
+    -o-transform: translate(-50%,-150%);
 }
 #div_registro.active {
-    transform: translate(-50%,-100%);;
+    transform: translate(-50%,-100%);
+    -webkit-transform: translate(-50%,-100%);
+    -moz-transform: translate(-50%,-100%);
+    -ms-transform: translate(-50%,-100%);
+    -o-transform: translate(-50%,-100%);
 }
 
 .popUp * {
