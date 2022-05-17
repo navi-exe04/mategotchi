@@ -40,10 +40,14 @@ exports.auth = async (req, res) => {
                 //Creamos variables de sesion
                 req.session.loggedin = true; //Esto nos permite saber si el usuario esta autenticado
                 req.session.name = results[0].nombre; //Obtenemos el nombre del usuario que esta ingresando
+                req.session.apellido_paterno = results[0].apellido_paterno;
+                req.session.apellido_materno = results[0].apellido_materno;
 
                 //Mandamos variables para la configuracion de la alerta de sweet alert
                 res.render('inicio', {
                     nombre_usuario: req.session.name,
+                    apellido_paterno: req.session.apellido_paterno,
+                    apellido_materno: req.session.apellido_materno,
                     alert: true,
                     alertTitle: "¡Hola de nuevo!",
                     alertMessage: `Me da gusto saludarte, ${req.session.name}.`,

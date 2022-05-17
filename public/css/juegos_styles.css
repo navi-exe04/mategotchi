@@ -1,21 +1,18 @@
+.zona-juego {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
 .nivel1Bienvenida{
-    max-width: 65%;
-    max-height: 65%;
-    
+    width: 90%;
+    max-width: 800px;
 }
-.fondo{
+div.fondo{
+    padding: 0;
     text-align: center; 
-    size: cover;
-}
-.boton{
-    position: absolute;
-    bottom: 5%;
-    right: 19%;
-}
-.respuesta{
-    position: absolute;
-    top: 15px;
-    right: 18%;
+    background-size: cover;
+    width: fit-content;
 }
 .ejercicio2{
     width: 400px;

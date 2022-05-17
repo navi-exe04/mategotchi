@@ -25,6 +25,8 @@ router.get('/inicio', (req, res) => {
 
         res.render('inicio', {
             nombre_usuario: req.session.name,
+            apellido_paterno: req.session.apellido_paterno,
+            apellido_materno: req.session.apellido_materno
         });
 
     } else { //El usuario no ha ingresado
@@ -194,6 +196,7 @@ router.get('/juego5', (req, res) => {
 
 //Solicitamos las funciones del controlador
 const controllers = require('./controllers/controllers');
+const expressMysqlSession = require('express-mysql-session');
 router.post('/auth', controllers.auth);
 router.post('/registroUsuario', controllers.registroUsuario);
 

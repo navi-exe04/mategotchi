@@ -37,8 +37,6 @@
                 <button type="button" id="boton-menu"><em class="fas fa-bars nes-btn"></em></button>
                 <div id="menu-nav">
                     <ul>
-                        <li><a href="/" class="nes-btn">Mascota</a></li>
-                        <li><a href="/" class="nes-btn">Mi perfil</a></li>
                         <li><a href="/" class="nes-btn">Configuración</a></li>
                         <li><a href="/logout" class="nes-btn is-error">Cerrar Sesión</a></li>
                     </ul>
@@ -50,19 +48,23 @@
     <h1 class="titleh1">Menu</h1>
     <main class="flex-section center-flex">
         <section class="section-inicio" id="user-div">
-            <div class="div-inicio nes-container is-centered flex-section" id="profile-section">
-                <div id="img-user">
-                    <em class="nes-bcrikko"></em>
+            <a id="boton-perfil">
+                <div class="div-inicio nes-container is-centered flex-section" id="profile-section">
+                    <div id="img-user">
+                        <em class="nes-bcrikko"></em>
+                    </div>
+                    <div id="info-user">
+                        <p> <%=nombre_usuario%> </p>
+                        <p>80 exp</p>
+                        <progress class="nes-progress is-success" value="80" max="100"></progress>
+                    </div>
                 </div>
-                <div id="info-user">
-                    <p> <%=nombre_usuario%> </p>
-                    <p>80 exp</p>
-                    <progress class="nes-progress is-success" value="80" max="100"></progress>
-                </div>
-            </div>
+            </a>
             <div class="div-inicio nes-container with-title is-centered" id="avatar-section">
-                <h3>Copo de nieve</h3>
-                <img src="../public/img/mouse-gif.gif" alt="" id="user-pet">
+                <div id="info-avatar">
+                    <h3>Copo de nieve</h3>
+                    <img src="../public/img/mouse-gif.gif" alt="" id="user-pet">
+                </div>
             </div>
         </section>
         <section class="section-inicio" id="menu-div">
