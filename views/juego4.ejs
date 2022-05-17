@@ -48,18 +48,20 @@
     </header>
 
     <main class="flex-section center-flex">
-        <h1 class="titleh1">Juego 3</h1>
+        <h1 class="titleh1">Juego 4</h1>
         <section class="zona-juego">
             <div class="fondo"> 
-                <img id="ejercicio2" src="../public/img/img_juegos/bienvenidanivel3.png" class="nivel1Bienvenida">
+                <img id="ejercicio1" src="../public/img/img_juegos/bienvenidanivel4.png" class="nivel1Bienvenida">
             </div>
             <div class="boton" id="boton1">
                 <button onclick="iniciar(0)" type="button"> <img src="../public/img/img_juegos/aceptar.png" height ="80" width="100" /></button>
             </div>
-            <div class="respuestaNivel3" id="resultado" style="display: none;">
+            <div class="respuesta" id="resultado" style="display: none;">
                 <form name="myForm" action="" onsubmit="validarRespuesta()" method="post">
-                    <input  class="Entradarespuesta" type="text" name="fname">
-                    <button class="boton2" onsubmit="validarRespuesta()" type="submit"> <img src="../public/img/img_juegos/aceptar.png" height ="40" width="50" /></button>
+                    <input type="text" name="fname1" class="R1">
+                    <input type="text" name="fname2" class="R2">
+                    <input type="text" name="fname3" class="R3">
+                    <button onsubmit="validarRespuesta()" type="submit" id="boton4"> <img src="../public/img/img_juegos/aceptar.png" height ="40" width="50" /></button>
                   </form>
             </div>
         </section>

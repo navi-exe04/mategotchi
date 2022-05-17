@@ -6,6 +6,7 @@ const divRegister = document.getElementById('div_registro');
 
 //Al iniciar la pagina
 window.onload = () => {
+    lanzaAlerta();
     botonesInformacion();
     sliderAutomatico();
 }
@@ -50,7 +51,7 @@ function botonesInformacion() {
 
     const botonRegister = document.getElementById("register-btn");
     const botonCerrarRegister = document.getElementById("btn-cerrarRegister");
-    botonRegister.addEventListener('click', lanzaAlerta());
+    botonRegister.addEventListener('click', abreInfo(divRegister));
     botonCerrarRegister.addEventListener('click', abreInfo(divRegister));
 
 }
@@ -75,23 +76,13 @@ function abreInfo(popup) {
 function lanzaAlerta() {
     Swal.fire({
         title: 'Antes de continuar...',
-        text: 'Es muy importante que algún adulto este presente para contestar las siguientes preguntas. Por favor, llama a un adulto para que te ayude.',
         icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Continuar',
-        cancelButtonText: 'Más tarde...'
-    }).then((result) => {
-        if(result.isConfirmed) {
-            if (divMenu.classList.contains('show')) {
-                divMenu.classList.remove('show');
-                allHTML.body.classList.remove('noScroll');
-            }
-            if(divLogin.classList.contains('active'))
-                divLogin.classList.toggle('active');
-            divRegister.classList.toggle('active');
-            allHTML.body.classList.toggle('noScroll');
+        text: 'Es muy importante que algún adulto este presente para usar Mategotchi. Por favor, llama a un adulto para seguir adelante.',
+        confirmButtonText: 'Aceptar',
+        showClass: {
+            popup: 'animate__animated animate__headShake'
+        }, hideClass: {
+            popup: 'animate__animated animate__bounceOut'
         }
     });
 }

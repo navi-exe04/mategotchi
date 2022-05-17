@@ -1,6 +1,5 @@
 .section-inicio {
-        height: 100%;
-        width: 45%;
+        width: 40%;
         margin: 1rem;
 }
 
@@ -20,7 +19,7 @@
 }
 
 .div-opcion {
-        padding: 19rem;
+        height: 210px;
 }
 
 .div-opcion:hover {
@@ -29,6 +28,7 @@
 
 #profile-section {
         justify-content: space-around;
+        height: 210px;
 }
 
 #img-user {
@@ -40,20 +40,36 @@
 
 #info-user {
         order: 2;
-        width: 80%;
+        width: 60%;
+}
+
+#avatar-section {
+        height: 420px;
 }
 
 #user-pet {
-        width: 45%;
+        width: 400px;
+        margin: auto 0;
 }
 
 
 #div_juegos {
+        position: relative;
         transform: translate(-50%,-120%);
         -webkit-transform: translate(-50%,-120%);
         -moz-transform: translate(-50%,-120%);
         -ms-transform: translate(-50%,-120%);
         -o-transform: translate(-50%,-120%);
+}
+
+.menu-juegos a {
+        color: var(--secundarioBlanco);
+        text-shadow: var(--sombraTextos);
+}
+
+.menu-juegos a:hover {
+        text-decoration: none;
+        color: var(--secundarioBlanco);
 }
 
 .option-juego {
@@ -75,6 +91,24 @@
 #juego3 {
         order: 3;
         background-image: url('../img/juego3.png');
+}
+
+#juego4 {
+        order: 4;
+        background-image: url('../img/juego4.png');
+}
+
+#juego5 {
+        order: 5;
+        background-image: url('../img/juego5.png');
+}
+
+#Clase1, #Clase2, #Clase3, #Clase4, #Clase5 {
+        background-image: url('../img/fondo_clases.png');
+}
+
+#Ejercicio1, #Ejercicio2, #Ejercicio3, #Ejercicio4, #Ejercicio5 {
+        background-image: url('../img/fondo_ejercicios.png');
 }
 
 @media (max-width: 870px) {

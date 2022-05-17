@@ -47,8 +47,8 @@
         </div>
     </header>
 
+    <h1 class="titleh1">Menu</h1>
     <main class="flex-section center-flex">
-        <h1 class="titleh1">Menu</h1>
         <section class="section-inicio" id="user-div">
             <div class="div-inicio nes-container is-centered flex-section" id="profile-section">
                 <div id="img-user">
@@ -60,19 +60,19 @@
                     <progress class="nes-progress is-success" value="80" max="100"></progress>
                 </div>
             </div>
-            <div class="div-inicio nes-container with-title is-centered">
+            <div class="div-inicio nes-container with-title is-centered" id="avatar-section">
                 <h3>Copo de nieve</h3>
                 <img src="../public/img/mouse-gif.gif" alt="" id="user-pet">
             </div>
         </section>
         <section class="section-inicio" id="menu-div">
-            <a>
+            <a id="boton-clases">
                 <div class="div-inicio nes-container is-centered div-opcion" id="div-clases">
                     <h3>Clases</h3>
                     <img src="../public/img/icon-clases.png" alt="">
                 </div>
             </a>
-            <a>
+            <a id="boton-ejercicios">
                 <div class="div-inicio nes-container is-centered div-opcion" id="div-ejercicios">
                     <h3>Ejercicios</h3>
                     <img src="../public/img/icon-actividad.png" alt="">
@@ -87,6 +87,50 @@
         </section>
     </main>
 
+    <div class="popUp nes-container is-rounded" id="div_clases">
+        <button type="button" id="btn-cerrarClases" class="nes-btn is-error">X</button>
+        <h2 class="subtitle">Clases</h2>
+        <section class="menu-juegos">
+            <a href="/proximamente">
+                <div class="option-juego nes-container is-centered" id="Clase1"><h3>Lección 1 Clase 1</h3></div>
+            </a>
+            <a href="/proximamente">
+                <div class="option-juego nes-container is-centered" id="Clase2"><h3>Lección 1 Clase 2</h3></div>
+            </a>
+            <a href="/proximamente">
+                <div class="option-juego nes-container is-centered" id="Clase3"><h3>Lección 1 Clase 3</h3></div>
+            </a>
+            <a href="/proximamente">
+                <div class="option-juego nes-container is-centered" id="Clase4"><h3>Lección 2 Clase 4</h3></div>
+            </a>
+            <a href="//proximamente">
+                <div class="option-juego nes-container is-centered" id="Clase5"><h3>Lección 2 Clase 5</h3></div>
+            </a>
+        </section>
+    </div>
+
+    <div class="popUp nes-container is-rounded" id="div_ejercicios">
+        <button type="button" id="btn-cerrarEjercicios" class="nes-btn is-error">X</button>
+        <h2 class="subtitle">Ejercicios</h2>
+        <section class="menu-juegos">
+            <a href="/proximamente">
+                <div class="option-juego nes-container is-centered" id="Ejercicio1"><h3>Ejercicio 1</h3></div>
+            </a>
+            <a href="/proximamente">
+                <div class="option-juego nes-container is-centered" id="Ejercicio2"><h3>Ejercicio 2</h3></div>
+            </a>
+            <a href="/proximamente">
+                <div class="option-juego nes-container is-centered" id="Ejercicio3"><h3>Ejercicio 3</h3></div>
+            </a>
+            <a href="/proximamente">
+                <div class="option-juego nes-container is-centered" id="Ejercicio4"><h3>Ejercicio 4</h3></div>
+            </a>
+            <a href="//proximamente">
+                <div class="option-juego nes-container is-centered" id="Ejercicio5"><h3>Ejercicio 5</h3></div>
+            </a>
+        </section>
+    </div>
+
     <div class="popUp nes-container is-rounded" id="div_juegos">
         <button type="button" id="btn-cerrarJuegos" class="nes-btn is-error">X</button>
         <h2 class="subtitle">Lista de juegos</h2>
@@ -99,6 +143,12 @@
             </a>
             <a href="/juego3">
                 <div class="option-juego nes-container is-centered" id="juego3"><h3>Juego 3</h3></div>
+            </a>
+            <a href="/juego4">
+                <div class="option-juego nes-container is-centered" id="juego4"><h3>Juego 4</h3></div>
+            </a>
+            <a href="/juego5">
+                <div class="option-juego nes-container is-centered" id="juego5"><h3>Juego 5</h3></div>
             </a>
         </section>
     </div>

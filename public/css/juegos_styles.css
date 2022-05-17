@@ -13,6 +13,7 @@
     right: 19%;
 }
 .respuesta{
+    position: absolute;
     top: 15px;
     right: 18%;
 }
@@ -32,4 +33,45 @@
 .boton2{
     position: absolute;
     top: 100px;
+}
+
+.R1, .R2, .R3{
+    position: absolute;
+    height: 50px;
+    right: 25.4%;
+}
+.R3{
+    top: 395px;
+    
+}
+.R2{
+    top: 215px;
+}
+.R1{
+    top: 50px;
+}
+#boton4{
+    position: absolute;
+    top: 500px;
+    right: 25.4%;
+    height: 60px;
+    width: 70px;
+}
+#botonR1{
+    position: absolute;
+    height: 50px;
+    right: 495px;
+    top: 330px;
+}
+#botonR2{
+    position: absolute;
+    height: 50px;
+    right: 345px;
+    top: 330px;
+}
+#botonR3{
+    position: absolute;
+    height: 50px;
+    right: 175px;
+    top: 330px;
 }

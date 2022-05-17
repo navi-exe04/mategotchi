@@ -114,13 +114,65 @@ router.get('/juego2', (req, res) => {
 
 });
 
-//Ruta para el juego 2
+//Ruta para el juego 3
 router.get('/juego3', (req, res) => {
     
     //El usuario ha ingresado correctamente
     if (req.session.loggedin) {
 
         res.render('juego3', {
+            nombre_usuario: req.session.name,
+        });
+
+    } else { //El usuario no ha ingresado
+
+        res.render('index', {
+            alert: true,
+            alertTitle: "¡Lo siento!",
+            alertMessage: "Debe ingresar sesión.",
+            alertIcon: 'warning',
+            showConfirmButton: true,
+            timer: false,
+            ruta: ''
+        });
+
+    }
+
+});
+
+//Ruta para el juego 4
+router.get('/juego4', (req, res) => {
+    
+    //El usuario ha ingresado correctamente
+    if (req.session.loggedin) {
+
+        res.render('juego4', {
+            nombre_usuario: req.session.name,
+        });
+
+    } else { //El usuario no ha ingresado
+
+        res.render('index', {
+            alert: true,
+            alertTitle: "¡Lo siento!",
+            alertMessage: "Debe ingresar sesión.",
+            alertIcon: 'warning',
+            showConfirmButton: true,
+            timer: false,
+            ruta: ''
+        });
+
+    }
+
+});
+
+//Ruta para el juego 5
+router.get('/juego5', (req, res) => {
+    
+    //El usuario ha ingresado correctamente
+    if (req.session.loggedin) {
+
+        res.render('juego5', {
             nombre_usuario: req.session.name,
         });
 

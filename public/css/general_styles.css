@@ -49,7 +49,7 @@ body {
     height: 100%;
     margin-bottom: 40px;
     font-family: var(--fuenteTextos);
-    background-image: url('../img/pixel_bg2.jpg');
+    background-image: url('../img/pixel_bg3.png');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -71,8 +71,8 @@ main.active, header.active, footer.active {
 }
 
 .titleh1 {
+    display: block;
     text-align: center;
-    width: 100%;
     margin: 2rem;
     font-size: 2.5rem;
     color: var(--principalAmarillo);
@@ -83,9 +83,19 @@ main.active, header.active, footer.active {
     font-family: var(--fuenteTitulos);
     text-align: center;
     font-size: 2rem;
-    color: var(--secundarioNaranja);
+    color: var(--secundarioBlanco);
     text-shadow: var(--sombraTextos);
     margin: 1rem 0;
+}
+
+@media (max-width: 655px) {
+    .titleh1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.5rem;
+    }
 }
 
 /*Estilos para el header*/
@@ -226,204 +236,6 @@ main.active, header.active, footer.active {
     background-color: rgba(245, 244, 245, 0.33);
 }
 
-#avatar1 {
-    order: 1;
-    width: 30%;
-}
-#bienvenida1 {
-    order: 2;
-    width: 60%;
-}
-#bienvenida2 {
-    order: 3;
-    width: 60%;
-}
-#avatar2 {
-    order: 4;
-    width: 30%;
-}
-
-.avatar-gif {
-    z-index: -1;
-    display: flex;
-    justify-content: center;
-}
-
-.mensaje-bienvenida p {
-    color: var(--principalNegro);
-    font-size: 2rem;
-    width: 90%;
-    text-align: justify;
-    margin: 0 auto;
-}
-
-.info-contacto {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.info-contacto a {
-    color: var(--principalNegro);
-}
-
-.info-contacto a:hover {
-    background-color: rgba(45, 189, 239, 0.5);
-    text-decoration: none;
-    color: var(--principalNegro);
-}
-
-.opciones-contacto {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.contacto {
-    width: 30%;
-    height: 10rem;
-    text-align: center;
-}
-
-@media (max-width: 1400px){
-    #avatar1, #avatar2, #bienvenida1, #bienvenida2 {
-        width: 100%;
-    }
-    #avatar2 {
-        order: 3;
-    }
-    #bienvenida2 {
-        order: 4;
-    }
-    .mensaje-bienvenida p {
-        font-size: 2.5rem;
-    }
-}
-
-/* Estilos del Slider */
-.slider {
-    margin: 2rem auto;
-    width: fit-content;
-    height: fit-content;
-    z-index: 1;
-}
-.slides {
-    width: 627px;
-    height: 418px;
-    display: flex;
-}
-.slides input {
-    display: none;
-}
-.slide {
-    transition: 1s;
-}
-.slide img {
-    display: block;
-    width: fit-content;
-    height: fit-content;
-    transition: 1s;
-    filter: opacity(60%);
-}
-.navegacion-manual {
-    position: absolute;
-    width: 648px;
-    margin-top: -30px;
-    display: flex;
-    justify-content: center;
-}
-.manual-btn {
-    border: 2px solid var(--colorCarne);
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-.manual-btn:not(:last-child) {
-    margin-right: 40px;
-}
-.manual-btn:hover {
-    background-color: var(--colorCarne);
-} 
-#radio1:checked ~ .first {
-    margin-left: 0%;
-}
-#radio1:checked ~ div.slide img#img1 {
-    transition: 1s;
-    filter: none;
-}
-#radio2:checked ~ .first {
-    margin-left: -100%;
-}
-#radio2:checked ~ div.slide img#img2 {
-    transition: 1s;
-    filter: none;
-}
-#radio3:checked ~ .first {
-    margin-left: -200%;
-}
-#radio3:checked ~ div.slide img#img3 {
-    transition: 1s;
-    filter: none;
-}
-#radio4:checked ~ .first {
-    margin-left: -300%;
-}
-#radio4:checked ~ div.slide img#img4 {
-    transition: 1s;
-    filter: none;
-}
-#radio5:checked ~ .first {
-    margin-left: -400%;
-}
-#radio5:checked ~ div.slide img#img5 {
-    transition: 1s;
-    filter: none;
-}
-/* #radio6:checked ~ .first {
-    margin-left: -500%;
-}
-#radio6:checked ~ div.slide img#img6 {
-    transition: 1s;
-    filter: none;
-} */
-.navegacion-auto {
-    position: absolute;
-    display: flex;
-    width: 648px;
-    justify-content: center;
-    margin-top: 432px;
-}
-.navegacion-auto div {
-    display: none;
-    border: 2px solid var(--colorCarne);
-    padding: 5px;
-    border-radius: 10px;
-    transition: 1s;
-}
-.navegacion-auto div:not(:last-child) {
-    margin-right: auto;
-}
-#radio1:checked ~ .navegacion-auto .auto-btn {
-    background-color: var(--colorCarne);
-}
-#radio2:checked ~ .navegacion-auto .auto-btn {
-    background-color: var(--colorCarne);
-}
-#radio3:checked ~ .navegacion-auto .auto-btn {
-    background-color: var(--colorCarne);
-}
-#radio4:checked ~ .navegacion-auto .auto-btn {
-    background-color: var(--colorCarne);
-}
-#radio5:checked ~ .navegacion-auto .auto-btn {
-    background-color: var(--colorCarne);
-}
-/* #radio6:checked ~ .navegacion-auto .auto-btn {
-    background-color: var(--colorCarne);
-} */
-
-/* Fin de estilos del Slider */
-
 /*Estilos para los popUp*/
 div.popUp {
     z-index: 4;
@@ -464,27 +276,18 @@ div.popUp.active {
     -o-transform: translate(-50%,50%);
 }
 
-.popUp * {
+div.popUp * {
     display: block;
     text-align: center;
 }
 
-.popUp label {
+div.popUp label {
     margin: 2rem 0;
     width: 100%;
 }
 
-.popUp span {
+div.popUp span {
     font-size: 1rem;
-}
-
-#label-condiciones {
-    width: 100%;
-    margin: 2rem auto;
-}
-
-input#condiciones {
-    margin: 0 auto;
 }
 
 span.tiny-text {
@@ -492,7 +295,7 @@ span.tiny-text {
     font-size: 0.8rem
 }
 
-.popUp input {
+div.popUp input {
     backdrop-filter: blur(8px) saturate(180%);
     -webkit-backdrop-filter: blur(8px) saturate(180%);
     background-color: rgba(245, 244, 245, 0.33);
@@ -500,12 +303,7 @@ span.tiny-text {
 
 @media (max-width: 767px) {
 
-    #section_login {
-        justify-content: center;
-        width: 100%;
-    }
-
-    .popUp {
+    div.popUp {
         min-width: 350px;
         width: 80%;
     }
