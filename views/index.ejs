@@ -37,10 +37,8 @@
                 <div id="menu-nav">
                     <ul>
                         <li><a href="/" class="nes-btn is-warning">Inicio</a></li>
-                        <li><a href="/" class="nes-btn">¿Quienes somos?</a></li>
-                        <li><a href="/" class="nes-btn">Contacto</a></li>
                         <li><a href="/" class="nes-btn is-primary" id="login-btn">Iniciar Sesión</a></li>
-                        <li><a href="/" class="nes-btn is-success" id="register-btn">Registrarse</a></li>
+                        <li><a href="/" class="nes-btn" id="register-btn">Registrarse</a></li>
                     </ul>
                 </div>
             </nav>
@@ -48,44 +46,111 @@
     </header>
 
     <main class="main-section">
+        
         <h1 class="titleh1">¡Bienvenido!</h1>
-        <section class="sections-main info-bienvenida">
+        
+        <section class="info-bienvenida">
             <div class="info">
                 <div class="avatar-gif" id="avatar1">
                     <img src="../public/img/rabbit-gif.gif" alt="">
                 </div>
-                <div class="mensaje-bienvenida nes-container is-rounded info-div" id="bienvenida1">
+                <div class="mensaje-bienvenida info-div nes-balloon from-left" id="bienvenida1">
                     <p>Descubre una nueva y divertida manera de aprender matemáticas.</p>
                 </div>
             </div>
             <div class="info">
-                <div class="mensaje-bienvenida nes-container is-rounded info-div" id="bienvenida2">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <div class="mensaje-bienvenida info-div nes-balloon from-right" id="bienvenida2">
+                    <p>¡Aprende junto a mi y muchas mascotas más!</p>
                 </div>
                 <div class="avatar-gif" id="avatar2">
                     <img src="../public/img/mouse-gif.gif" alt="">
                 </div>
             </div>
         </section>
-        <section class="sections-main info-objetivo">
-            <h2 class="sub-title">Nuestro objetivo</h2>
-            <div class="slider">
-
-            </div>
-            <div class="mensaje-bienvenida nes-container is-rounded info-div">
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita minima aperiam labore nisi odit quidem laboriosam sed autem molestiae. Aliquid cupiditate laudantium atque ullam sequi minima sunt ipsum iusto illum?</p>
-            </div>
+        
+        <section class="info-objetivo">
+                <h2 class="subtitle">Nuestro objetivo</h2>
+                <section class="slider">
+                    <div class="slides">
+                        <!-- Botones -->
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <input type="radio" name="radio-btn" id="radio5">
+                        <!-- Fin de botones -->
+                        <!-- Imagenes -->
+                        <div class="slide first">
+                            <img id="img1" src="../public/img/img_slider/slider1_lg.png" alt="foto-ext-1">
+                        </div>
+                        <div class="slide">
+                            <img id="img2" src="../public/img/img_slider/slider2_lg.png" alt="foto-ext-2">
+                        </div>
+                        <div class="slide">
+                            <img id="img3" src="../public/img/img_slider/slider3_lg.png" alt="foto-int-1">
+                        </div>
+                        <div class="slide">
+                            <img id="img4" src="../public/img/img_slider/slider4_lg.png" alt="foto-int-2">
+                        </div>
+                        <div class="slide">
+                            <img id="img5" src="../public/img/img_slider/slider5_lg.png" alt="foto-dr-1">
+                        </div>
+                        <!-- Fin de imagenes -->
+                        <!--Navegacion automatica-->
+                        <div class="navegacion-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                            <div class="auto-btn5"></div>
+                        </div>
+                        <!--fin de navegacion automatica-->
+                    </div>
+                    <!--Navegacion manual-->
+                    <div class="navegacion-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                        <label for="radio5" class="manual-btn"></label>
+                        <label for="radio6" class="manual-btn"></label>
+                    </div>
+                    <!--fin de navegacion manual-->                    
+                </section>
+                <div class="mensaje-bienvenida info-div info nes-container">
+                    <p class="justify-text">
+                        Queremos ayudar a los niños de primaria en México, a aprender de una
+                        manera más facil y divertida la materia de matemáticas. 
+                    </p>
+                    <p class="justify-text">
+                        Sabemos que a veces las matemáticas pueden ser muy complicadas para los niños. Es por ello,
+                        que Mategotchi, ofrece una oportunidad a todos los niños para que se sigan 
+                        desarrollando en su etapa infantil.
+                    </p>
+                </div>
         </section>
-        <section class="sections-main info-contacto">
-            <h2 class="sub-title">Contacto</h2>
-            <div class="contacto">
-
-            </div>
-            <div class="contacto">
-
-            </div>
-            <div class="contacto">
-
+        
+        <section class="info-contacto">
+            <h2 class="subtitle">Contacto</h2> 
+            <div class="opciones-contacto">
+                <a href="/" class="contacto info-div nes-container">
+                    <div>
+                        <p>Facebook</p>
+                        <em class="nes-icon facebook is-large"></em>
+                    </div>
+                </a>
+                <a href="/" class="contacto info-div nes-container">
+                    <div>
+                        <p>Correo</p>
+                        <em class="nes-icon gmail is-large"></em>
+                    </div>
+                </a>
+                <a href="/" class="contacto info-div nes-container">
+                    <div>
+                        <p>GitHub</p>
+                        <em class="nes-icon github is-large"></em>
+                    </div>
+                </a>
             </div>
         </section>
 
@@ -133,6 +198,10 @@
                     </select>
                 </label>
             </div>
+            <label for="escuela_usuario">
+                <span>¿En que escuela estudias?</span>
+                <input type="text" name="escuela_usuario" id="escuela_usuario" class="nes-input">
+            </label>
             <label for="email2_usuario">
                 <span>Correo electronico: </span>
                 <input type="email" name="email2_usuario" id="email2_usuario" class="nes-input" required>
@@ -140,6 +209,10 @@
             <label for="password2_usuario">
                 <span>Contraseña:</span>
                 <input type="password" name="password2_usuario" id="password2_usuario" class="nes-input" required>
+            </label>
+            <label for="condiciones" id="label-condiciones">
+                <span class="tiny-text">Acepto que mi información sea utilizada en la plataforma.</span>
+                <input type="checkbox" name="condiciones" id="condiciones" required>
             </label>
             <button type="submit" id="submit_registro" class="nes-btn is-primary">Registrarse</button>
         </form>
